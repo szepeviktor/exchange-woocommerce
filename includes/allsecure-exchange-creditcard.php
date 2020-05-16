@@ -116,7 +116,6 @@ class WC_AllsecureExchange_CreditCard extends WC_Payment_Gateway
         /**
          * gateway client
          */
-        WC_AllsecureExchange_Provider::autoloadClient();
         AllsecureExchange\Client\Client::setApiUrl($this->get_option('apiHost'));
         $client = new AllsecureExchange\Client\Client(
             $this->get_option('apiUser'),
@@ -265,8 +264,6 @@ class WC_AllsecureExchange_CreditCard extends WC_Payment_Gateway
 
     public function process_callback()
     {
-        WC_AllsecureExchange_Provider::autoloadClient();
-
         AllsecureExchange\Client\Client::setApiUrl($this->get_option('apiHost'));
         $client = new AllsecureExchange\Client\Client(
             $this->get_option('apiUser'),
@@ -1453,7 +1450,6 @@ class WC_AllsecureExchange_CreditCard extends WC_Payment_Gateway
 		/**
 		 * gateway client
 		 */
-		WC_AllsecureExchange_Provider::autoloadClient();
 		AllsecureExchange\Client\Client::setApiUrl($this->get_option('apiHost'));
 		$client = new AllsecureExchange\Client\Client(
 			$this->get_option('apiUser'),

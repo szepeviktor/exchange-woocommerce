@@ -5,14 +5,12 @@
   "license": "",
   "require": {
     "php": ">=7.1",
-    "psr/log": "^1.1"
+    "psr/log": "^1.1",
+    "allsecure-pay/php-exchange": "^2.5"
   },
   "autoload": {
-    "psr-4": {
-      "AllsecureExchange\\Client\\": "./classes/client/"
-    }
-  },
-  "config": {
-    "vendor-dir": "classes/vendor"
+    "classmap": [
+      "includes/"
+    ]
   }
 }

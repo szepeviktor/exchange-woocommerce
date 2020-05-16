@@ -19,9 +19,4 @@ final class WC_AllsecureExchange_Provider
             // 'WC_AllsecureExchange_CreditCard_Visa',
         ];
     }
-
-    public static function autoloadClient()
-    {
-        require_once ALLSECURE_EXCHANGE_EXTENSION_BASEDIR . 'classes/vendor/autoload.php';
-    }
 }
